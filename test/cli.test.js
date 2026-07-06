@@ -162,7 +162,7 @@ test("run prints a table + upsell and exits 0 for a valid lookup", async () => {
   assert.equal(code, 0);
   assert.match(text, /google\.com/);
   assert.match(text, /2028-09-14/);
-  assert.match(text, /domainwatchdog\.app/);
+  assert.match(text, /klaxel\.com/);
 });
 
 test("run --json emits machine-readable output, exit 0", async () => {
@@ -179,7 +179,7 @@ test("run --json emits machine-readable output, exit 0", async () => {
   assert.equal(parsed.results[0].domain, "google.com");
   assert.equal(parsed.results[0].ok, true);
   assert.equal(parsed.results[0].daysLeft, 366);
-  assert.equal(parsed.product, "https://www.domainwatchdog.app");
+  assert.equal(parsed.product, "https://klaxel.com");
 });
 
 test("run with no args shows help and exits 2 (usage error)", async () => {

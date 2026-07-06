@@ -1,6 +1,6 @@
 {
-  "name": "domain-watchdog-check",
-  "version": "0.1.1",
+  "name": "klaxel-check",
+  "version": "0.2.0",
   "description": "Free CLI to check any domain's expiry date via RDAP (the modern WHOIS). Monitor domain expiration for your own and your clients' domains — no signup, no dependencies.",
   "keywords": [
     "domain",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "domain-watchdog-check": "bin/cli.js"
+    "klaxel-check": "bin/cli.js"
   },
   "files": [
     "bin",
@@ -38,13 +38,13 @@
   "scripts": {
     "test": "node --test"
   },
-  "homepage": "https://www.domainwatchdog.app",
+  "homepage": "https://klaxel.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crescerasystems/domain-watchdog-check.git"
+    "url": "git+https://github.com/crescerasystems/klaxel-check.git"
   },
   "bugs": {
-    "url": "https://github.com/crescerasystems/domain-watchdog-check/issues"
+    "url": "https://github.com/crescerasystems/klaxel-check/issues"
   },
   "author": "Crescera Systems"
 }

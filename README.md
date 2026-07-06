@@ -1,4 +1,4 @@
-# domain-watchdog-check
+# klaxel-check
 
 **Check any domain's expiry date from your terminal — free, zero dependencies, no signup.**
 
@@ -8,7 +8,7 @@ left, color-coded so an expiring domain jumps out. It reads the registry's
 real and machine-accurate — not scraped, not guessed.
 
 ```sh
-npx domain-watchdog-check google.com
+npx klaxel-check google.com
 ```
 
 ## Why this exists
@@ -30,14 +30,14 @@ free way to spot-check any of them.
 No install needed:
 
 ```sh
-npx domain-watchdog-check example.com
+npx klaxel-check example.com
 ```
 
 Or install globally:
 
 ```sh
-npm install -g domain-watchdog-check
-domain-watchdog-check example.com
+npm install -g klaxel-check
+klaxel-check example.com
 ```
 
 Requires **Node.js 18 or newer** (uses the built-in global `fetch`).
@@ -45,7 +45,7 @@ Requires **Node.js 18 or newer** (uses the built-in global `fetch`).
 ## Usage
 
 ```text
-domain-watchdog-check <domain> [more-domains...]
+klaxel-check <domain> [more-domains...]
 
 Options
   --json        Machine-readable JSON output (one object per domain)
@@ -55,13 +55,13 @@ Options
 ### Check one domain
 
 ```sh
-$ npx domain-watchdog-check google.com
+$ npx klaxel-check google.com
 
   DOMAIN      EXPIRY      STATUS
 ● google.com  2028-09-14  819 days left (client transfer prohibited)
 
-Checking client domains by hand? Domain Watchdog watches them all daily and
-emails you before any one lapses — https://www.domainwatchdog.app
+Checking client domains by hand? Klaxel watches them all daily and
+emails you before any one lapses — https://klaxel.com
 ```
 
 The status dot and days-left text are color-coded:
@@ -75,7 +75,7 @@ The status dot and days-left text are color-coded:
 ### Check several at once
 
 ```sh
-$ npx domain-watchdog-check google.com stripe.com basecamp.io
+$ npx klaxel-check google.com stripe.com basecamp.io
 
   DOMAIN       EXPIRY      STATUS
 ● google.com   2028-09-14  819 days left (client transfer prohibited)
@@ -86,7 +86,7 @@ $ npx domain-watchdog-check google.com stripe.com basecamp.io
 ### JSON output (scripts / CI / agents)
 
 ```sh
-$ npx domain-watchdog-check --json google.com
+$ npx klaxel-check --json google.com
 ```
 
 ```json
@@ -102,7 +102,7 @@ $ npx domain-watchdog-check --json google.com
       "source": "https://rdap.verisign.com/com/v1/"
     }
   ],
-  "product": "https://www.domainwatchdog.app"
+  "product": "https://klaxel.com"
 }
 ```
 
@@ -135,7 +135,7 @@ status.
 This CLI is a spot-check — you have to run it. If you'd rather **never think
 about it again**, the hosted product does the watching for you:
 
-### [Domain Watchdog →](https://www.domainwatchdog.app)
+### [Klaxel →](https://klaxel.com)
 
 - Checks all your domains every day, automatically
 - Emails you well before any domain lapses (configurable lead time)
